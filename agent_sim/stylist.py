@@ -20,4 +20,4 @@ class Stylist:
         ]
         stylized_message = self.model.predict_messages(llm_messages).content
         json_message = extract_json(self.model, stylized_message)
-        return json_message['message']
+        return json_message['stylized-message']
