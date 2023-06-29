@@ -19,7 +19,7 @@ class Writer:
             HumanMessage(content=WRITER_USER_PROMPT.format(conversation=previous_conversation, thoughts=current_thoughts))
         ]
         message = self.model.predict_messages(llm_messages).content
+        print(message)
         json_message = extract_json(self.model, message)
-    
         return json_message['message']
 

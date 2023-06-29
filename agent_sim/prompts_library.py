@@ -56,6 +56,8 @@ Your job is to write the next message in an exchange.
 
 You should base the message on the conversation so far and on your thoughts.
 
+Messages should be reasonably short and succinct. 
+
 The past conversation is in a format like this:
 
 Speaker: <speaker>
@@ -75,7 +77,7 @@ You are master author. Your job is to rewrite a message in a particular style.
 
 Style: {style}
 
-Return the message as JSON {{ "message" : <your message> }}
+Return the message as JSON {{ "styled_message" : <your message> }}
 """
 
 EXTRACT_USER_PROMPT = """
