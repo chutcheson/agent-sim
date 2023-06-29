@@ -6,7 +6,7 @@ class Player:
     def __init__(self, model, role, goal, style):
         self.role = role
         self.strategist = Strategist(model, role, goal)
-        self.writer = Writer(model)
+        self.writer = Writer(model, role)
         self.stylist = Stylist(model, style)
 
     def next_message(self, message_history):

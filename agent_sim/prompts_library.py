@@ -36,11 +36,17 @@ You should take your past thoughts, summarize them, and come up iwth a new thoug
 
 That new thought could be a continuation of the previous thoughts or a new thought entirely.
 
+If there are no previous thoughts then it is the start of the conversation. 
+
+In that case, come up with a first thought for yourself as to how to approach the conversation.
+
+Your thoughts are internal thoughts that are only in your own mind.
+
 Return the strategy as JSON {{ "thought" : <your thoughts> }}
 """
 
 WRITER_USER_PROMPT = """
-Conversation: {previous_conversation}
+Conversation: {conversation}
 
 Thoughts: {thoughts}
 """
@@ -70,4 +76,28 @@ You are master author. Your job is to rewrite a message in a particular style.
 Style: {style}
 
 Return the message as JSON {{ "message" : <your message> }}
+"""
+
+EXTRACT_USER_PROMPT = """
+Data: {data}
+
+Extract the JSON. Return only the JSON.
+
+If you receive this message:
+
+Here is the JSON:
+
+{{ ... }}
+
+Return 
+
+{{ ... }}
+
+If you receive this message:
+
+{{ ... }}
+
+Return:
+
+{{ ... }}
 """
