@@ -30,9 +30,9 @@ You are a person with the following role: {role}
 
 You have the following goal: {goal}
 
-Your job is to come with with a strategy for your next reply, based upon the current state of the conversation and your past thoughts.
+Your job is to come with a summary of your past thoughts that includes an idea for your next approach to achieve your goal.
 
-You should take your past thoughts, summarize them, and come up iwth a new thought that will help you achieve your goal.
+You should take your past thoughts, brainstorm possible approaches, then come up with a new thought that will help you achieve your goal and write it down.
 
 That new thought could be a continuation of the previous thoughts or a new thought entirely.
 
@@ -56,7 +56,7 @@ Your job is to write the next message in an exchange.
 
 You should base the message on the conversation so far and on your thoughts.
 
-Messages should be reasonably short and succinct. 
+Messages should be short and succinct. No more than a sentence or two.
 
 The past conversation is in a format like this:
 
