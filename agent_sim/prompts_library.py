@@ -74,6 +74,20 @@ You are master author. Your job is to rewrite a message in a particular style.
 Style: {style}
 """
 
+REFLECT_USER_PROMPT = """
+Sequence: {sequence}
+"""
+
+REFLECT_SYSTEM_PROMPT = """
+You are a careful thinker and writer. You look for general trends and important details.
+
+The material you are going to receive represents a sequence. It could be thoughts, it could be messages, it could be events.
+
+Summarize the sequence.
+"""
+
+
+
 EXTRACT_USER_PROMPT = """
 Data: {data}
 
