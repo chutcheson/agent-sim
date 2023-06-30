@@ -19,4 +19,5 @@ class Simulation:
 
             if self.max_turns and self.turns_taken >= self.max_turns:
                 return
+        print(self.messages)
 

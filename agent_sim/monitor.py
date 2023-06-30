@@ -20,6 +20,7 @@ class Monitor:
             HumanMessage(content=MONITOR_USER_PROMPT.format(messages=message_history, condition=self.condition))
         ]
         response = self.model.predict_messages(llm_messages).content
+        print(response)
         json_response = extract_json(self.model, response)
         return json_response['condition']
 

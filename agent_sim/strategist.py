@@ -13,7 +13,7 @@ class Strategist:
         self.model = model
         self.role = role
         self.goal = goal
-        self.thoughts = ""
+        self.thoughts = "This is the start of the conversation. I should lay out the background."
 
     def strategize(self, previous_conversation):
         llm_messages = [
