@@ -23,9 +23,6 @@ class Strategist:
                 thoughts=self.thoughts))
         ]
         response = self.model.predict_messages(llm_messages).content
-        print(response)
-        json_response = extract_json(self.model, response)
-        new_thought = json_response['thought']
-        self.thoughts = new_thought
-        return new_thought
+        self.thoughts += response
+        return response
 

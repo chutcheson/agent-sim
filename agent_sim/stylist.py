@@ -13,11 +13,10 @@ class Stylist:
         self.model = model
         self.style = style
 
-    def stylize(self, current_message):
+    def stylize(self, current_message, message_history):
         llm_messages = [
             SystemMessage(content=STYLIST_SYSTEM_PROMPT.format(style=self.style)),
-            HumanMessage(content=STYLIST_USER_PROMPT.format(message=current_message))
+            HumanMessage(content=STYLIST_USER_PROMPT.format(previous_messages=message_history,message=current_message))
         ]
         stylized_message = self.model.predict_messages(llm_messages).content
-        json_message = extract_json(self.model, stylized_message)
-        return json_message['styled_message']
+        return stylized_message

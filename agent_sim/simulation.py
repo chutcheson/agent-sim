@@ -14,9 +14,9 @@ class Simulation:
                 self.messages += message
                 self.turns_taken += 1
 
-                if self.monitor.check_condition(self.messages):
-                    return
+            if self.monitor.check_condition(self.messages):
+                return
 
-                if self.max_turns and self.turns_taken >= self.max_turns:
-                    return
+            if self.max_turns and self.turns_taken >= self.max_turns:
+                return
 

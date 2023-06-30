@@ -41,8 +41,6 @@ If there are no previous thoughts then it is the start of the conversation.
 In that case, come up with a first thought for yourself as to how to approach the conversation.
 
 Your thoughts are internal thoughts that are only in your own mind.
-
-Return the strategy as JSON {{ "thought" : <your thoughts> }}
 """
 
 WRITER_USER_PROMPT = """
@@ -64,8 +62,6 @@ Speaker: <speaker>
 Message: <message>
 
 You are {role}.
-
-You should return your message as JSON {{ "message" : <your message> }}
 """
 
 STYLIST_USER_PROMPT = """
@@ -76,8 +72,6 @@ STYLIST_SYSTEM_PROMPT = """
 You are master author. Your job is to rewrite a message in a particular style.
 
 Style: {style}
-
-Return the message as JSON {{ "styled_message" : <your message> }}
 """
 
 EXTRACT_USER_PROMPT = """

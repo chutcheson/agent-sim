@@ -12,5 +12,5 @@ class Player:
     def next_message(self, message_history):
         strategy = self.strategist.strategize(message_history)
         message = self.writer.write(message_history, strategy)
-        stylized_message = self.stylist.stylize(message)
+        stylized_message = self.stylist.stylize(message, message_history)
         return f"Sender: {self.role}\n Message: {stylized_message}"
