@@ -18,7 +18,7 @@ class Strategist:
 
     def strategize(self, previous_conversation):
         merged_thoughts = "\n".join([f"Thought {i}: {thought}" for i, thought in enumerate(self.thoughts)])
-        if len(merged_thought) >= 3000:
+        if len(merged_thoughts) >= 3000:
             self.thoughts = [reflect(merged_thoughts)]
             merged_thoughts = self.thoughts[0]
         llm_messages = [
