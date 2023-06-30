@@ -61,7 +61,7 @@ The past conversation is in a format like this:
 Speaker: <speaker>
 Message: <message>
 
-You are {role}.
+You are {role}. Don't include the Speaker:, Message: tags in your message. Just return <message>.
 """
 
 STYLIST_USER_PROMPT = """
