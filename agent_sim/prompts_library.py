@@ -65,7 +65,9 @@ You are {role}. Don't include the Speaker:, Message: tags in your message. Just 
 """
 
 STYLIST_USER_PROMPT = """
-Message: {message}
+Previous Messages: {previous_messages}
+
+Message to Style: {message}
 """
 
 STYLIST_SYSTEM_PROMPT = """

@@ -11,13 +11,13 @@ class Simulation:
             for agent in self.agents:
                 message = agent.next_message(self.messages)
                 print(message)
-                self.messages += message
+                self.messages += f"\n{message}"
                 self.turns_taken += 1
 
             if self.monitor.check_condition(self.messages):
+                print(self.messages)
                 return
 
             if self.max_turns and self.turns_taken >= self.max_turns:
+                print(self.messages)
                 return
-        print(self.messages)
-
