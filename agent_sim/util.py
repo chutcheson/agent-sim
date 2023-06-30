@@ -23,7 +23,7 @@ def reflect(sequencet_to_summarize):
     llm_messages = [
         SystemMessage(content=REFLECT_SYSTEM_PROMPT),
         HumanMessage(content=REFLECT_USER_PROMPT.format(
-            sequence=sequence_to_summarize)
+            sequence=sequence_to_summarize))
     ]
     response = self.model.predict_messages(llm_messages).content
     return response
