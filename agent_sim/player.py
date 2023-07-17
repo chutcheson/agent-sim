@@ -9,7 +9,8 @@ class Player:
         self.writer = Writer(model, role)
         self.stylist = Stylist(model, style)
 
-    def next_message(self, message_history):
+    def turn(self, world_state):
+        message_history = world_state.get_message_history(self.role)
         strategy = self.strategist.strategize(message_history)
         message = self.writer.write(message_history, strategy)
         stylized_message = self.stylist.stylize(message, message_history)
